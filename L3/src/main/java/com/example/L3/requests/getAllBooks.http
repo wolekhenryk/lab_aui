@@ -1,0 +1,45 @@
+### GET ALL BOOKS
+GET http://localhost:8080/api/books
+
+### GET SPECIFIC BOOK BY ID
+GET http://localhost:8080/api/books/47144490-c791-48c4-91f4-361d25d44190
+
+### GET ALL LIBRARIES
+GET http://localhost:8080/api/libraries
+
+### GET BOOKS FROM A SPECIFIC LIBRARY
+GET http://localhost:8080/api/books/library/72421463-4719-4196-b8a5-17d5776fd63c
+
+### CREATE A NEW LIBRARY
+POST http://localhost:8080/api/libraries
+Content-Type: application/json
+
+{
+  "name": "new-library",
+  "managerName": "andrey smaev"
+}
+
+### CHECK IF THE LIBRARY WAS ADDED
+GET http://localhost:8080/api/libraries
+
+### CREATE NEW BOOK
+POST http://localhost:8080/api/books/library/adbd269e-3598-4c2e-85bc-20d8a0c244b4
+Content-Type: application/json
+
+{
+  "title": "strong",
+  "author": "smayev andrey",
+  "edition": "FIRST_EDITION"
+}
+
+### UPDATE LIBRARY
+PUT http://localhost:8080/api/libraries/adbd269e-3598-4c2e-85bc-20d8a0c244b4
+Content-Type: application/json
+
+{
+  "name": "xx-xx",
+  "managerName": "xx-xx-xx"
+}
+
+### DELETE LIBRARY
+DELETE http://localhost:8080/api/libraries/ac26559c-2b0c-41be-92df-8ee97487607d
