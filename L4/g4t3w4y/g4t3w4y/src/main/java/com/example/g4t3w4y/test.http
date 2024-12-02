@@ -1,0 +1,49 @@
+### GET ALL LIBRARIES
+GET http://localhost:8080/api/libraries
+
+### GET BY ID
+GET http://localhost:8080/api/libraries/4af912ea-63aa-4083-bdc2-c136eb80fd2f
+
+### CREATE NEW LIBRARY
+POST http://localhost:8080/api/libraries
+Content-Type: application/json
+
+{
+  "name": "New Library",
+  "managerName": "Andrey Smaev"
+}
+
+### UPDATE AN EXISTING LIBRARY
+PUT http://localhost:8080/api/libraries/a12ff618-5816-4f4f-8a0e-afdf8d6b703e
+Content-Type: application/json
+
+{
+  "name": "New UPDATED Library",
+  "managerName": "Andrey Smaev BUT UPDATED"
+}
+
+### DELETE A LIBRARY BY ID
+DELETE http://localhost:8080/api/libraries/22a31c1b-9f00-4496-a1f8-c074bbb8c946
+
+### GET ALL BOOKS
+GET http://localhost:8080/api/books
+
+### CREATE A NEW BOOK
+POST http://localhost:8080/api/books/library/d27077d9-8918-4122-b6a1-6f321f6ea24d
+Content-Type: application/json
+
+{
+  "title": "Example book 3",
+  "author": "Jan Kowalski",
+  "edition": "FIRST_EDITION"
+}
+
+### UPDATE AN EXISTING BOOK
+PUT http://localhost:8080/api/books/ecc01a5d-0fe6-4de5-aa80-f81a766b30ab
+Content-Type: application/json
+
+{
+  "title": "Example book 3 UPDATED",
+  "author": "Jan Kowalski UPDATED",
+  "edition": "THIRD_EDITION"
+}
