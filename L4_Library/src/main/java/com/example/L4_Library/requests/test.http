@@ -1,0 +1,26 @@
+### GET ALL LIBRARIES
+GET http://localhost:5002/api/libraries
+
+### GET BY ID
+GET http://localhost:8082/api/libraries/19b0847b-2b0a-4e94-9e0f-6e2a10ec1b29
+
+### CREATE NEW LIBRARY
+POST http://localhost:8082/api/libraries
+Content-Type: application/json
+
+{
+  "name": "New Library",
+  "managerName": "Andrey Smaev"
+}
+
+### UPDATE AN EXISTING LIBRARY
+PUT http://localhost:8082/api/libraries/19b0847b-2b0a-4e94-9e0f-6e2a10ec1b29
+Content-Type: application/json
+
+{
+  "name": "New UPDATED Library",
+  "managerName": "Andrey Smaev BUT UPDATED"
+}
+
+### DELETE A LIBRARY BY ID
+DELETE http://localhost:8082/api/libraries/19b0847b-2b0a-4e94-9e0f-6e2a10ec1b29
